@@ -1,0 +1,15 @@
+test_1.txt,test_1_1.txt,false
+test_1.txt, test_1_2.txt,true
+test_1.txt,test_1_3.txt,false
+test_2.txt, test_2_1.txt,true
+test_2.txt, test_2_2.txt,true
+test_1.txt,test_1_1.txt,false
+test_1.txt, test_1_2.txt,true
+test_1.txt,test_1_3.txt,false
+test_2.txt, test_2_1.txt,true
+test_2.txt,test_2_2.txt,false
+test_1.txt,test_1_1.txt,false
+test_1.txt, test_1_2.txt,true
+test_1.txt,test_1_3.txt,false
+test_2.txt, test_2_1.txt,true
+test_2.txt,test_2_2.txt,false

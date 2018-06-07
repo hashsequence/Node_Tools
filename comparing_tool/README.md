@@ -1,0 +1,55 @@
+Comparing Tool
+Author: Avery Wong
+Date: 20180607
+--------------------------------------------
+
+Input: a text file
+
+example input.txt content:
+
++test_0.txt
++test_1.txt
+-test_1_1.txt
+-test_1_2.txt
+-test_1_3.txt
++test_2.txt
+-test_2_1.txt
+-test_2_2.txt
+
+++++++++++++++++++++++++++++++++++++++++++++
+-append + to the file1 and append - to file2's that you want to compare with file1.
+-the comparison is done between each successive + and - pair, so in the example above
+test_1.txt will be compared only with the entries with "-" only up to the next "+"
+++++++++++++++++++++++++++++++++++++++++++++
+
+example invocations:
+
+$ nodejs index.js -f input.txt
+$ nodejs index.js --file=input.txt
+
+++++++++++++++++++++++++++++++++++++++++++++
+the -f is specifies the name of the input file you want to read
+++++++++++++++++++++++++++++++++++++++++++++
+
+
+output: a generated text file <filename>_diff.txt
+
+example output:
+
+test_0.txt, NULL ,NULL
+test_1.txt, test_1_1.txt ,false
+test_1.txt, test_1_2.txt ,true
+test_1.txt, test_1_3.txt ,false
+test_2.txt, test_2_1.txt ,true
+test_2.txt, test_2_2.txt ,false
+
+++++++++++++++++++++++++++++++++++++++++++++
+output format: file1 | file2 | <true,false,NULL>
+
+will output in column delimited format
+if there are no files to compare with file it will simply output: file1,NULL,NULL
+
+if the files are the same it will output: fil1,file2,true 
+if the files are not the same it will output: fil1,file2,false
+
+++++++++++++++++++++++++++++++++++++++++++++

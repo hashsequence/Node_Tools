@@ -19,4 +19,4 @@ const argv = yargs.options({
 .argv;
 
 
-console.log(comparer.main(argv.file));
+comparer.main(argv.file);
