@@ -3,6 +3,8 @@ Author: Avery Wong
 Date: 20180607
 --------------------------------------------
 
+Summary: General comparing tool to compare many files at once
+
 Input: a text file
 
 example input.txt content:
